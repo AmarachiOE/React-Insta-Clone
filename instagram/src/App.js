@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from "./dummy-data"; // don't us { dummyData } because not JSON object?
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from "./components/PostContainer/PostContainer";
-import CommentSection from "./components/CommentSection/CommentSection";
+//import CommentSection from "./components/CommentSection/CommentSection";
 
 class App extends Component {
   constructor() {
@@ -12,13 +12,16 @@ class App extends Component {
       dummyData: dummyData,
     };
   }
+
+  // App should map over dummyData, passing each individual object as a prop to an instance of PostContainer
+
   render() {
     return (
       <div className="App">
         <h2>Hi</h2>
         <SearchBar />
         <PostContainer />
-        <CommentSection />
+        {/* <CommentSection /> */}
       </div>
     );
   }
