@@ -5,7 +5,6 @@ import React from 'react';
 const Comment = props => {
     return (
         <div>
-            <p>This is the comment component</p>
             <p><strong>{props.eachComment.username}</strong> {props.eachComment.text}</p>
         </div>
     )

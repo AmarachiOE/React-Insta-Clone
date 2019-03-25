@@ -1,6 +1,7 @@
 import React from 'react';
 import "./CommentSection.css";
 import Comment from "./Comment";
+import CommentForm from "./CommentForm";
 
 
 // The CommentSection component will receive the ARRAY OF COMMENTS as PROPS and render a Comment component with the username of the poster as well as the post's text. 
@@ -33,6 +34,7 @@ class CommentSection extends React.Component{
             <div>
                 {this.state.comments.map( comment => 
                   <Comment eachComment={comment} key={comment.id}/>  )}
+                  <CommentForm />
                 
             </div>
         )
