@@ -20,8 +20,7 @@ class App extends Component {
       <div className="App">
         <h2>Hi</h2>
         <SearchBar />
-        <PostContainer />
-        {/* <CommentSection /> */}
+        <PostContainer commentProp={this.state.dummyData}/>
       </div>
     );
   }
