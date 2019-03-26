@@ -15,7 +15,6 @@ const PostContainer = props => {
     return (
         //console.log("Post Container:", props),
         <div className="post-container">
-            <p>This is the Post Container</p>
             {props.dummyData.map( post => 
             <Post eachPost={post} key={post.id} />)}           
         </div>

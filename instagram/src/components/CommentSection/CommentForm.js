@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentForm = props => {
     return (
-        <form>
+        <form className="comment-form">
             <input 
                 className="comment-input" placeholder="Add comment..." 
             />
