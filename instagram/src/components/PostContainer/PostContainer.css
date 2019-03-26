@@ -34,9 +34,27 @@
     height: auto;
 }
 
+.post-icons {
+    /* margin-left: 10%;
+    padding-top: 5px; */
+    padding: 12px 0 0 12px;
+    display: flex;
+    /* justify-content: space-between; */
+    color: black; 
+    font-size: 1.5rem;
+}
+
+.post-icons i {
+    margin-right: 20px;
+}
+
+.post-likes {
+    padding-left: 12px;
+}
+
 .comment-section {
     /* background: pink; */
-    padding: 12px;
+    padding: 0 12px;
 }
 
 form {
