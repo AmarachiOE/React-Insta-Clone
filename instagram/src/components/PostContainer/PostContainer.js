@@ -5,19 +5,19 @@ import Post from "./Post";
 
 // Each PostContainer component will then pass the array of comments on each post object as a prop to an instance of the CommentSection component
 
-// Reference Nested Class Comps TK Example: https://codesandbox.io/s/k3j4q7px4o
+// Reference Nested Class Comps TK Example: https://codesandbox.io/s/k3j4q7px4o or not exactly.
 
-// map: map over each post in the dummyData array
+// map: map over each post in the dummyData array and to invoke an instance of <Post /> for each individual post
+
+// can only map over an ARRAY not objects.
 
 const PostContainer = props => {
     return (
-        <div>
+        //console.log("Post Container:", props),
+        <div className="post-container">
             <p>This is the Post Container</p>
-            {/* {props.commentProp.map( post => <CommentSection eachPost={post} key={post.id} />)} */}
-            {props.commentProp.map( post => 
+            {props.dummyData.map( post => 
             <Post eachPost={post} key={post.id} />)}           
-            )}
-
         </div>
     );
 };

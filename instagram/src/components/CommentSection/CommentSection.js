@@ -19,19 +19,24 @@ import CommentForm from "./CommentForm";
 
 
 class CommentSection extends React.Component{
-    constructor(props) { // receives data from this.state of App
+    constructor(props) { // receives props data from eachPost, which is in PostContainer being mapped as post from dummyData
         super(props);
         this.state = {
             comments: props.eachPost.comments, 
-            // props.eachPost.comment refers to each "posts" comment array  within the dummyData array (there should be 3 posts)
+            // props.eachPost.comment refers to each "post's" comment property, which is an array  within the dummyData array (there should be 3 posts)
 
             // we're pretty much extracting the comments array from each post object in the dummyData
         };
     }
+
+    // CommentSection.js we're  already looking at an individual post: 
+    // Now for each post, (using map) each comment of that post will get styled by <Comment />> 
+    // and there will be a commentForm at the bottom of each post (no map)
+
     render() {
         console.log(this.state);
         return (
-            <div>
+            <div className="comment-section">
                 {this.state.comments.map( comment => 
                   <Comment eachComment={comment} key={comment.id}/>  )}
                   <CommentForm />
