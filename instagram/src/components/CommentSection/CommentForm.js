@@ -2,7 +2,8 @@ import React from "react";
 
 const CommentForm = props => {
   return (
-    <form className="comment-form">
+      //added props.addNewComment to form's onSubmit prop instead of button onClick
+    <form className="comment-form" onSubmit={props.addNewComment}>
       <input 
         className="comment-input" 
         name="text"
@@ -10,9 +11,7 @@ const CommentForm = props => {
         onChange={props.handleChanges}
         placeholder="Add comment..." />
 
-      <button 
-        className="post-button" 
-        onClick={props.addNewComment}>
+      <button className="post-button">
         Post
       </button>
     </form>
@@ -20,3 +19,5 @@ const CommentForm = props => {
 };
 
 export default CommentForm;
+
+// for button onClick={props.addNewComment}

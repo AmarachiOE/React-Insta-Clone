@@ -21,9 +21,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.eachPost.comments,
-    //   id: "",
-    //   username: "", //are these fields necessary?
       text: "",
+
       // props.eachPost.comment refers to each "post's" comment property, which is an array  within the dummyData array (there should be 3 posts)
 
       // we're pretty much extracting the comments array from each post object in the dummyData
@@ -54,7 +53,9 @@ class CommentSection extends React.Component {
   };
 
   // CommentSection.js we're  already looking at an individual post:
+
   // Now for each post, (using map) each comment of that post will get styled by <Comment />>
+  
   // and there will be a commentForm at the bottom of each post (no map)
 
   render() {
