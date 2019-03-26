@@ -31,7 +31,7 @@ class CommentSection extends React.Component {
 
   // for input field
   handleChanges = event => {
-      console.log("event:", event.target);
+      //console.log("event:", event.target);
       this.setState({
           [event.target.name]: event.target.value
       });
@@ -42,20 +42,28 @@ class CommentSection extends React.Component {
     event.preventDefault(); // no refreshing page
 
     const newComment = {
-        id: Date.now(),
+        id: Date.now().toString, //needs to be string for PropType check
         username: "cool_girl",
         text: this.state.text,
     };
 
     this.setState({
-        comments: [...this.state.comments, newComment]
+        comments: [...this.state.comments, newComment],
+        text: "" //after adding comment, text on input field goes back to empty
+        
     });
+
+
   };
+
+  // clear form input field:
+    //document.getElementById("form-reset").reset();
+
 
   // CommentSection.js we're  already looking at an individual post:
 
   // Now for each post, (using map) each comment of that post will get styled by <Comment />>
-  
+
   // and there will be a commentForm at the bottom of each post (no map)
 
   render() {
@@ -67,6 +75,7 @@ class CommentSection extends React.Component {
         ))}
         <CommentForm 
             addNewComment={this.addNewComment}
+            text={this.state.text}
             handleChanges={this.handleChanges} 
         />
       </div>

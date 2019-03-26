@@ -9,7 +9,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData: [],
+      filteredPost: [], // for search bar
+      searching: false
     };
   }
 
@@ -17,13 +19,39 @@ class App extends Component {
     this.setState({ dummyData: dummyData });
   }
 
+  // Filter Post function for Search Bar
+
+  
+
+  
+  filterPostHandler = event => {
+    
+    const newDummyData = this.state.dummyData.filter( (currentPost) => {
+      if (currentPost.username.includes(event.target.value)) {
+        return currentPost;
+      } 
+    });
+
+    if (event.target.value === "") {
+      this.setState({ searching: false });
+    } else {
+      this.setState ({ filteredPost: newDummyData, searching: true });
+    }
+
+    
+  }
+  
+
   // App should map over dummyData, passing each individual object as a prop to an instance of PostContainer
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer dummyData={this.state.dummyData} />
+        <SearchBar 
+        filterPostHandler={this.filterPostHandler}
+        />
+        {/* if searching = true then use filteredPost data, if false use dummyData */}
+        <PostContainer dummyData={this.state.searching ? this.state.filteredPost : this.state.dummyData} />
       </div>
     );
   }

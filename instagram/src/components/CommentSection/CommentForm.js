@@ -9,7 +9,8 @@ const CommentForm = props => {
         name="text"
         value={props.text}
         onChange={props.handleChanges}
-        placeholder="Add comment..." />
+        placeholder="Add comment..." 
+        />
 
       <button className="post-button">
         Post
