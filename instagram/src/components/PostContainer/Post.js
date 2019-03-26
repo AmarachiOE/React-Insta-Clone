@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from "prop-types";
 
 // We're looking at all 3 posts here
 
@@ -29,7 +30,25 @@ const Post = props => {
     );
 }
 
-
+// Checking PropTypes
+// each post is an object
+Post.propTypes = {
+    eachPost: PropTypes.shape({
+        id: PropTypes.string,
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string,
+                username: PropTypes.string,
+                text: PropTypes.string
+              }) 
+        ),
+    })
+};
 
 
 export default Post;

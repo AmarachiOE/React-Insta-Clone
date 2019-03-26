@@ -14,6 +14,7 @@ const Comment = props => {
 };
 
 // Checking PropType
+// each comment is an object
 
 Comment.propTypes = {
   eachComment: PropTypes.shape({
