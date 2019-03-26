@@ -50,8 +50,9 @@ class App extends Component {
         <SearchBar 
         filterPostHandler={this.filterPostHandler}
         />
-        {/* if searching = true then use filteredPost data, if false use dummyData */}
-        <PostContainer dummyData={this.state.searching ? this.state.filteredPost : this.state.dummyData} />
+        {/* TERNARY statement: if searching = true then use filteredPost data, if false use dummyData. PostContainer is what is renering the data to the screen as posts*/}
+        <PostContainer 
+        dummyData={this.state.searching ? this.state.filteredPost : this.state.dummyData} />
       </div>
     );
   }

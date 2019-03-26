@@ -48,6 +48,10 @@
     margin-right: 20px;
 }
 
+.post-icons:hover {
+    cursor: pointer;
+}
+
 .post-likes {
     padding-left: 12px;
 }
@@ -78,4 +82,9 @@
     color: lightskyblue;
     background: none;
     border: none;
+}
+
+.post-button:hover {
+    color: rgb(17, 76, 153);
+    cursor: pointer;
 }

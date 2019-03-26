@@ -17,7 +17,8 @@ const SearchBar = props => {
       <form className="search-bar-form">
         <input 
         className="search-bar-input"
-        onChange={props.filterPostHandler} placeholder="Search..." />
+        onChange={props.filterPostHandler} //don't use onKeyDown
+        placeholder="Search..." />
       </form>
 
       <div className="search-bar-icons">
