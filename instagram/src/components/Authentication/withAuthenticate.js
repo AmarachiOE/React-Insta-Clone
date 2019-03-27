@@ -38,38 +38,3 @@ const withAuthenticate = PostsPage => LoginPage =>
   };
 
 export default withAuthenticate;
-//(PostsPage)(LoginPage);
-// export default withAuthenticate(PostsPage)(LoginPage);
-
-/*
-const withAuthenticate = PostsPage => LoginPage => 
-    class extends React.Component {
-        render() {
-            if (localStorage.getItem("username")) {
-                return <PostsPage />>;
-            } // else
-            return <LoginPage />
-        }
-    };
-
-
-    FROM CODESANDBOX:
-
-const withConditionalRender = First => Second => props => {
-  if (localStorage.getItem("showFirst")) {
-    //if showFirst is true render First
-    return <First />;
-  } //else
-  return <Second />;
-};
-
-const withAuthenticate = PostsPage => LoginPage => {
-  if (localStorage.getItem("user")) {
-    //if "user" is true render First
-    return <PostsPage />;
-  } //else
-  return <LoginPage />;
-};
-
-
-*/
