@@ -1,37 +1,87 @@
-import React from 'react';
+import React from "react";
 
-/*
 
-Building the High Order Component
 
-Create a directory called authentication
-Inside that directory create a HOC called withAuthenticate. This is where all of the magic is going to happen.
+// const withAuthenticate = PassedComponent =>
+//     class extends React.Component {
+//         render() {
+//             return <PassedComponent />
+//         }
+//     };
 
-This component should be able to take in a component as an argument, and it will return a class component. 
-(so shouldn't have: = props =>)
-
-Inside of withAuthenticate's render method, you'll want to return the Component that gets passed into it.
-
-Be sure to export.
-
-Head over to App.js and import in our new withAuthenticate Higher Order Component.
-
-Set a new const called ComponentFromWithAuthenticate, and set it's value to the HOC invoked, with PostsPage passed in.
-
-Inside App, you should now render ComponentFromWithAuthenticate in place of PostsPage.
-
-If this worked correctly, then everything should render as it used to.
-
-withAuthenticate will look a lot like this when you're done setting it up.
-
-*/
-
-const withAuthenticate = PassedComponent => 
+const withAuthenticate = PostsPage => LoginPage => 
     class extends React.Component {
-        render() {
-            return <PassedComponent />
+        constructor() {
+            super();
+            this.state = {
+                loggedIn: false,
+            }
         }
+
+        componentDidMount() {
+            if (!localStorage.getItem("username")) {
+                this.setState ({ loggedIn: false });
+            } else {
+                this.setState ({ loggedIn : true});
+            }
+        }
+        render() {
+            if (this.state.loggedIn === true) {
+                //if loggedIn object on this state is true, render PostsPage
+                return <PostsPage />;
+              } //else render LoginPage
+              return <LoginPage />;
+        }
+        
     };
   
 
+
 export default withAuthenticate;
+//(PostsPage)(LoginPage);
+// export default withAuthenticate(PostsPage)(LoginPage);
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const withAuthenticate = PostsPage => LoginPage => 
+    class extends React.Component {
+        render() {
+            if (localStorage.getItem("username")) {
+                return <PostsPage />>;
+            } // else
+            return <LoginPage />
+        }
+    };
+
+
+    FROM CODESANDBOX:
+
+const withConditionalRender = First => Second => props => {
+  if (localStorage.getItem("showFirst")) {
+    //if showFirst is true render First
+    return <First />;
+  } //else
+  return <Second />;
+};
+
+const withAuthenticate = PostsPage => LoginPage => {
+  if (localStorage.getItem("user")) {
+    //if "user" is true render First
+    return <PostsPage />;
+  } //else
+  return <LoginPage />;
+};
+
+
+*/
+
