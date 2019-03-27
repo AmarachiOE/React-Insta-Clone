@@ -1,5 +1,6 @@
 import React from "react";
 import LoginForm from "./LoginForm";
+import "./LoginPage.css";
 
 /* 
 
@@ -60,6 +61,12 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="Login-Page">
+      <img
+          className="login-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
+          alt="Instagram word logo"
+        />
+      <h2>Login to Your Account</h2>
         <LoginForm 
         handleChanges={this.handleChanges}
         login={this.login}/>

@@ -1,9 +1,10 @@
 import React from 'react';
+import "./LoginPage.css";
 
 const LoginForm = props => {
     return (
-        <div className="Login-Form">
-          <form onSubmit={props.login}>
+        <div >
+          <form className="Login-Form" onSubmit={props.login}>
             <input 
             onChange={props.handleChanges}
             placeholder="Username" />

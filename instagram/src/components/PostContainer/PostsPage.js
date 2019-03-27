@@ -38,7 +38,6 @@ class PostsPage extends React.Component {
   render() {
     return (
       <div className="Posts-Page">
-        <h2>Posts Page Component</h2>
         <SearchBar filterPostHandler={this.filterPostHandler} />
         {/* TERNARY statement: if searching = true then use filteredPost data, if false use dummyData. PostContainer is what is renering the data to the screen as posts*/}
         <PostContainer
