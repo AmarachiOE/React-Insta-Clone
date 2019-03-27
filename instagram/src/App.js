@@ -4,6 +4,7 @@ import dummyData from "./dummy-data"; // don't us { dummyData } because not JSON
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 //import CommentSection from "./components/CommentSection/CommentSection";
+import PostsPage from "./components/PostContainer/PostsPage";
 
 class App extends Component {
   constructor() {
@@ -53,6 +54,7 @@ class App extends Component {
         {/* TERNARY statement: if searching = true then use filteredPost data, if false use dummyData. PostContainer is what is renering the data to the screen as posts*/}
         <PostContainer 
         dummyData={this.state.searching ? this.state.filteredPost : this.state.dummyData} />
+        <PostsPage />
       </div>
     );
   }
