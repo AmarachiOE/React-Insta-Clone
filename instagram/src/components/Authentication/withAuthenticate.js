@@ -1,5 +1,12 @@
 import React from "react";
+import styled, { css } from "styled-components";
 import "../Login/LoginPage.css";
+
+
+const LoginPageContainerDiv = styled.div`
+  height: 100vh;
+  background-image: linear-gradient(200deg, purple, orange);
+`;
 
 // const withAuthenticate = PassedComponent =>
 //     class extends React.Component {
@@ -30,9 +37,9 @@ const withAuthenticate = PostsPage => LoginPage =>
         return <PostsPage />;
       } //else render LoginPage
       return (
-        <div className="LoginPage-Container">
+        <LoginPageContainerDiv>
           <LoginPage />
-        </div>
+        </LoginPageContainerDiv>
       );
     }
   };

@@ -1,6 +1,45 @@
 import React from "react";
 //import LoginForm from "./LoginForm";
+import styled, { css } from "styled-components";
 import "./LoginPage.css";
+
+const LoginPageDiv = styled.div`
+  padding-top: 8%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const LoginLogoImg = styled.img`
+  width: 40%;
+  height: auto;
+
+`;
+
+const LoginForm = styled.form`
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LoginFormInput = styled.input`
+  width: 250px;
+  height: 30px;
+`;
+
+const LoginButton = styled.button`
+  width: 250px;
+  height: 30px;
+  background: black;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+`;
 
 class LoginPage extends React.Component {
   constructor() {
@@ -28,23 +67,22 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div className="Login-Page">
-        <img
-          className="login-logo"
+      <LoginPageDiv>
+        <LoginLogoImg
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
           alt="Instagram word logo"
         />
         <h2>Login to Your Account</h2>
-        <form className="Login-Form" onSubmit={this.login}>
-            <input 
+        <LoginForm onSubmit={this.login}>
+            <LoginFormInput 
             onChange={this.handleChanges}
             placeholder="Username" />
-            <input 
+            <LoginFormInput 
             onChange={this.handleChanges}placeholder="Password" />
-            <button className="login-button">Login</button>
-          </form>
+            <LoginButton>Login</LoginButton>
+          </LoginForm>
         {/* <LoginForm handleChanges={this.handleChanges} login={this.login} /> */}
-      </div>
+      </LoginPageDiv>
     );
   }
 }
