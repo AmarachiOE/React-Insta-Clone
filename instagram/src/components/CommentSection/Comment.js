@@ -1,15 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled, { css } from "styled-components";
+
+
+const CommentDiv = styled.div`
+  margin-bottom: 0.2rem;
+  padding: 0
+`;
 
 // should display the username and comment text of the commenter
 
 const Comment = props => {
   return (
-    <div>
-      <p>
+    <CommentDiv>
         <strong>{props.eachComment.username}</strong> {props.eachComment.text}
-      </p>
-    </div>
+    </CommentDiv>
   );
 };
 

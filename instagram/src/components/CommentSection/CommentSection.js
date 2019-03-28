@@ -2,6 +2,16 @@ import React from "react";
 import "./CommentSection.css";
 import Comment from "./Comment";
 import CommentForm from "./CommentForm";
+import styled, { css } from "styled-components";
+
+
+const CommentSectionDiv = styled.div`
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+`;
 
 // The CommentSection component will receive the ARRAY OF COMMENTS as PROPS and render a Comment component with the username of the poster as well as the post's text.
 
@@ -52,12 +62,8 @@ class CommentSection extends React.Component {
         text: "" //after adding comment, text on input field goes back to empty
         
     });
-
-
   };
 
-  // clear form input field:
-    //document.getElementById("form-reset").reset();
 
 
   // CommentSection.js we're  already looking at an individual post:
@@ -69,16 +75,17 @@ class CommentSection extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div className="comment-section">
+      <CommentSectionDiv>
         {this.state.comments.map(comment => (
           <Comment eachComment={comment} key={comment.id} />
         ))}
+        {/* timestamp */}
         <CommentForm 
             addNewComment={this.addNewComment}
             text={this.state.text}
             handleChanges={this.handleChanges} 
         />
-      </div>
+      </CommentSectionDiv>
     );
   }
 }
