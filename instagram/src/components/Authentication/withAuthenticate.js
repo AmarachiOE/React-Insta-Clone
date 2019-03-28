@@ -10,8 +10,8 @@ import "../Login/LoginPage.css";
 
 const withAuthenticate = PostsPage => LoginPage =>
   class extends React.Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
         loggedIn: false
       };
@@ -25,7 +25,7 @@ const withAuthenticate = PostsPage => LoginPage =>
       }
     }
     render() {
-      if (this.state.loggedIn === true) {
+      if (this.state.loggedIn) {
         //if loggedIn object on this state is true, render PostsPage
         return <PostsPage />;
       } //else render LoginPage

@@ -1,5 +1,10 @@
 import React from 'react';
 import "./LoginPage.css";
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'; //for reactstrap form that's commented out... both form versions work!
+
+// DON'T NEED THIS FILE ANYMORE
+// PUT FORM ON LOGINPAGE.JS INSTEAD
+
 
 const LoginForm = props => {
     return (
@@ -10,11 +15,91 @@ const LoginForm = props => {
             placeholder="Username" />
             <input 
             onChange={props.handleChanges}placeholder="Password" />
-            <button>Login</button>
+            <button className="login-button">Login</button>
           </form>
         </div>
       );
 }
+
+// class LoginForm extends React.Component {
+//     render() {
+//       return (
+//         <Form>
+//           <FormGroup>
+//             <Label for="exampleEmail">Email</Label>
+//             <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="examplePassword">Password</Label>
+//             <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="exampleSelect">Select</Label>
+//             <Input type="select" name="select" id="exampleSelect">
+//               <option>1</option>
+//               <option>2</option>
+//               <option>3</option>
+//               <option>4</option>
+//               <option>5</option>
+//             </Input>
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="exampleSelectMulti">Select Multiple</Label>
+//             <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+//               <option>1</option>
+//               <option>2</option>
+//               <option>3</option>
+//               <option>4</option>
+//               <option>5</option>
+//             </Input>
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="exampleText">Text Area</Label>
+//             <Input type="textarea" name="text" id="exampleText" />
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="exampleFile">File</Label>
+//             <Input type="file" name="file" id="exampleFile" />
+//             <FormText color="muted">
+//               This is some placeholder block-level help text for the above input.
+//               It's a bit lighter and easily wraps to a new line.
+//             </FormText>
+//           </FormGroup>
+//           <FormGroup tag="fieldset">
+//             <legend>Radio Buttons</legend>
+//             <FormGroup check>
+//               <Label check>
+//                 <Input type="radio" name="radio1" />{' '}
+//                 Option one is this and that—be sure to include why it's great
+//               </Label>
+//             </FormGroup>
+//             <FormGroup check>
+//               <Label check>
+//                 <Input type="radio" name="radio1" />{' '}
+//                 Option two can be something else and selecting it will deselect option one
+//               </Label>
+//             </FormGroup>
+//             <FormGroup check disabled>
+//               <Label check>
+//                 <Input type="radio" name="radio1" disabled />{' '}
+//                 Option three is disabled
+//               </Label>
+//             </FormGroup>
+//           </FormGroup>
+//           <FormGroup check>
+//             <Label check>
+//               <Input type="checkbox" />{' '}
+//               Check me out
+//             </Label>
+//           </FormGroup>
+//           <Button>Submit</Button>
+//         </Form>
+//       );
+//     }
+//   }
+
+
+
 
 export default LoginForm;
 
@@ -28,26 +113,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 LOGIN FORM:
 https://react-bootstrap.github.io/components/forms/
 
- <Form>
-        <Form.Group>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group>
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+ 
 
 
 */

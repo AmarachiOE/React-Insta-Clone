@@ -1,4 +1,4 @@
-.search-bar-container {
+/* .search-bar-container {
     height: 80px;
     margin-top: 20px;
     padding: 0 8%;
@@ -7,29 +7,26 @@
     justify-content: space-between;
     border-bottom: 2px solid lightgray;
     align-items: center;
-}
+} */
 
-.logos {
+/* .logos {
     display: flex;
     align-items: center;
-}
+} */
 
-.logos i {
+.fa-instagram {
     color: black; 
     font-size: 1.5rem;
     padding-right: 10px;
-    /* border: 1px solid red; */
     border-right: 1px solid gray;
 }
 
-.instagram-word-logo {
+/* .instagram-word-logo {
     width: 100px;
     padding-left: 10px;
-    /* border: 1px solid red; */
-}
+} */
 
-.search-bar-input {
-    /* height: 20px; */
+/* .search-bar-input {
     width: 200px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -37,15 +34,14 @@
     text-align: center;
     font-size: 0.8rem;
 
-}
+} */
 
-.search-bar-icons {
+/* .search-bar-icons {
     display: flex;
-    /* background: green; */
     color: black; 
     font-size: 1.3rem;
-}
+} */
 
-.search-bar-icons i {
+.far {
     padding: 0 12px;
 }

@@ -1,12 +1,13 @@
 import React from "react";
-import LoginForm from "./LoginForm";
+//import LoginForm from "./LoginForm";
 import "./LoginPage.css";
 
 class LoginPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      username: ""
+      username: "",
+      password: ""
     };
   }
 
@@ -21,8 +22,8 @@ class LoginPage extends React.Component {
   login = event => {
     //event.preventDefault();
     //const user = this.state.username;
-    localStorage.setItem("username", true);
-    //window.location.reload(); does this function work to reload??
+    localStorage.setItem("username", false); // check this
+    window.location.reload(); //refreshing
   };
 
   render() {
@@ -34,7 +35,15 @@ class LoginPage extends React.Component {
           alt="Instagram word logo"
         />
         <h2>Login to Your Account</h2>
-        <LoginForm handleChanges={this.handleChanges} login={this.login} />
+        <form className="Login-Form" onSubmit={this.login}>
+            <input 
+            onChange={this.handleChanges}
+            placeholder="Username" />
+            <input 
+            onChange={this.handleChanges}placeholder="Password" />
+            <button className="login-button">Login</button>
+          </form>
+        {/* <LoginForm handleChanges={this.handleChanges} login={this.login} /> */}
       </div>
     );
   }
