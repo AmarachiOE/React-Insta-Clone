@@ -79,7 +79,6 @@ class CommentSection extends React.Component {
         {this.state.comments.map(comment => (
           <Comment eachComment={comment} key={comment.id} />
         ))}
-        {/* timestamp */}
         <CommentForm 
             addNewComment={this.addNewComment}
             text={this.state.text}

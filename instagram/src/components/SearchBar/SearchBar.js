@@ -21,7 +21,7 @@ const LogosDiv = styled.div`
 `;
 
 const InstagramImage = styled.img`
-  width: 100px;
+  width: 120px;
   padding-left: 10px;
 `;
 

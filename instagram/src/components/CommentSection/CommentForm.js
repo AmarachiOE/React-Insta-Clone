@@ -5,14 +5,17 @@ const CommentFormDiv = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-top: 10px;
+  margin: 10px 0;
+  border-top: 1px solid lightgray;
 `;
 
 
 const CommentInput = styled.input`
   width: 90%;
-  height: 30px;
-  padding: 12px;
-  font-size: 0.8rem;
+  height: 40px;
+  padding: 12px 12px 12px 0px;
+  font-size: 1rem;
   border: none;
 `;
 
