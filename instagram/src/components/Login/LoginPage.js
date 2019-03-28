@@ -42,10 +42,10 @@ const LoginButton = styled.button`
 `;
 
 class LoginPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      username: "",
+      username: "", //remember to reference this on input value on form
       password: ""
     };
   }
@@ -60,8 +60,8 @@ class LoginPage extends React.Component {
   // For onSubmit on form on LoginForm.js
   login = event => {
     //event.preventDefault();
-    //const user = this.state.username;
-    localStorage.setItem("username", false); // check this
+    const user = this.state.username;
+    localStorage.setItem("user", user); // check this
     window.location.reload(); //refreshing
   };
 
@@ -75,6 +75,8 @@ class LoginPage extends React.Component {
         <h2>Login to Your Account</h2>
         <LoginForm onSubmit={this.login}>
             <LoginFormInput 
+            name="username"
+            value={this.username}
             onChange={this.handleChanges}
             placeholder="Username" />
             <LoginFormInput 
