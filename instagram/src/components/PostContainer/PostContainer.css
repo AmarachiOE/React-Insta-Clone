@@ -1,0 +1,91 @@
+/* .post-container {
+    width: 604px;
+    margin-left: 10%;
+    
+} */
+
+/* .each-post {
+    margin-bottom: 50px;
+    border: 1px solid lightgray;
+
+} */
+
+
+/* .user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+
+/* .thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+} */
+
+/* .user-info p {
+    padding: 10px 0;
+} */
+
+/* .post-image {
+    width: 100%;
+    height: auto;
+} */
+
+/* .post-icons {
+    padding: 12px 0 0 12px;
+    display: flex;
+    color: black; 
+    font-size: 1.5rem;
+} */
+
+.fa-heart, .fa-comment {
+    margin-right: 5px;
+}
+
+.fa-heart:hover {
+    cursor: pointer;
+}
+
+.fa-comment:hover {
+    cursor: pointer;
+}
+
+/* .post-likes {
+    padding-left: 12px;
+} */
+
+/* .comment-section {
+    padding: 0 12px;
+} */
+
+/* .comment-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+} */
+
+/* .comment-input {
+    width: 90%;
+    height: 30px;
+    padding: 12px;
+    font-size: 0.8rem;
+    border: none;
+} */
+
+/* .post-button {
+    width: 10%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: lightskyblue;
+    background: none;
+    border: none;
+} */
+
+/* .post-button:hover {
+    color: rgb(17, 76, 153);
+    cursor: pointer;
+} */
